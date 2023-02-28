@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "902e68a0-90c7-484c-91e8-000b29708011",
+		"name": "EconomicAir Company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14801810"
+	},
+	"item": [
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Get all bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/booking/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"booking",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"code\": \"P999\",\n        \"seatNumber\": \"A99\",\n        \"description\": \"Posto test\",\n        \"ticketPrice\": 99.99,\n        \"flight\": {\n            \"id\": 4,\n            \"timeDep\": \"2099-12-20T11:31:00\",\n            \"timeArr\": \"2099-12-20T12:31:00\",\n            \"depAirport\": {\n                \"id\": 5,\n                \"name\": \"Aeroporto 1 test\",\n                \"city\": \"Test\",\n                \"nation\": \"Test\",\n                \"code\": \"0TEST\"\n            },\n            \"arrAirport\": {\n                \"id\": 3,\n                \"name\": \"Aeroporto 2 test\",\n                \"city\": \"Test\",\n                \"nation\": \"Test\",\n                \"code\": \"1Test\"\n            }\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/booking/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"booking",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
